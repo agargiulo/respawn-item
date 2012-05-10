@@ -9,6 +9,7 @@ package com.agargiulo.code.bukkit.respawn_item;
 
 import java.util.logging.Logger;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
@@ -56,7 +57,7 @@ public class RespawnItem extends JavaPlugin
 	{
 		Player player = event.getPlayer(); // The player who respawned
 		PlayerInventory playerInv = player.getInventory(); // Their items
-		ItemStack items = new ItemStack(371);
+		ItemStack items = new ItemStack(Material.GOLD_NUGGET);
 		playerInv.addItem(items);
 		player.sendMessage("You just respawned, have some gold.");
 	}
