@@ -1,5 +1,5 @@
 name: respawn-item
-main: com.agargiulo.code.bukkit.respawn-item.RespawnItem
+main: com.agargiulo.code.bukkit.respawn_item.RespawnItem
 version: 0.1
 author: anthony@agargiulo.com
 website: https://github.com/agargiulo/respawn-item
