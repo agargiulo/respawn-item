@@ -1,6 +1,6 @@
 name: respawn-item
 main: com.agargiulo.code.bukkit.respawn_item.RespawnItem
-version: 0.7
+version: 1.0
 author: anthony@agargiulo.com
 website: https://github.com/agargiulo/respawn-item
 description: Gives every player a single gold nugget when they respawn
