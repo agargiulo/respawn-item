@@ -68,6 +68,7 @@ public class RespawnItem extends JavaPlugin
 		PlayerInventory playerInv = player.getInventory(); // Their items
 		ItemStack items = new ItemStack(Material.GOLD_NUGGET);
 		playerInv.addItem(items);
+		player.getInventory().setContents(playerInv.getContents());
 		player.sendMessage("You just respawned, have some gold.");
 		log.info("Player respawned");
 	}
