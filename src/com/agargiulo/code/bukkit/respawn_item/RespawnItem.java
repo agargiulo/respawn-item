@@ -2,7 +2,6 @@
  * File: RespawnItem.java
  * Date created: May 10, 2012
  * 
- * @author Anthony Gargiulo
  */
 
 package com.agargiulo.code.bukkit.respawn_item;
@@ -11,13 +10,14 @@ import java.util.logging.Logger;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
- * @author Anthony Gargiulo
+ * @author Anthony Gargiulo (anthony@agargiulo.com)
  * 
  */
 public class RespawnItem extends JavaPlugin
@@ -51,6 +51,15 @@ public class RespawnItem extends JavaPlugin
 
 	/**
 	 * @param event
+	 */
+	public void onPlayerJoin(PlayerJoinEvent event)
+	{
+		log.info("Player " + event.getPlayer().getDisplayName()
+				+ " has joined the game");
+	}
+
+	/**
+	 * @param event
 	 * 
 	 */
 	public void onPlayerRespawn(PlayerRespawnEvent event)
@@ -60,6 +69,7 @@ public class RespawnItem extends JavaPlugin
 		ItemStack items = new ItemStack(Material.GOLD_NUGGET);
 		playerInv.addItem(items);
 		player.sendMessage("You just respawned, have some gold.");
+		log.info("Player respawned");
 	}
 
 }
