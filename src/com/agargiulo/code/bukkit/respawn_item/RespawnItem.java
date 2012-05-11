@@ -1,7 +1,6 @@
 
 package com.agargiulo.code.bukkit.respawn_item;
 
-import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerRespawnEvent;
@@ -19,6 +18,7 @@ public class RespawnItem extends JavaPlugin implements Listener
 	public void onEnable()
 	{
 		getServer().getPluginManager().registerEvents(this, this);
+
 	}
 
 	/**
@@ -29,8 +29,7 @@ public class RespawnItem extends JavaPlugin implements Listener
 	@EventHandler
 	public void onPlayerRespawn(PlayerRespawnEvent event)
 	{
-		event.getPlayer().getInventory()
-				.addItem(new ItemStack(Material.GOLD_NUGGET));
+		int item = getConfig().getInt("item", 371);
+		event.getPlayer().getInventory().addItem(new ItemStack(item));
 	}
-
 }
