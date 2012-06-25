@@ -5,12 +5,10 @@ When loaded, every player that respawns receives one item, as configured in the 
 # Use
 
 ```sh
-cd /home/bukkit/craftbukkit/plugins/
-wget https://github.com/downloads/agargiulo/respawn-item/respawn-item.jar
-mkdir respawn-item && cd respawn-item
-cat << EOF > config.yml
-item: 371
-EOF
+[~] % cd /home/bukkit/craftbukkit/plugins/
+[~] % wget https://github.com/downloads/agargiulo/respawn-item/respawn-item.jar
+[~] % mkdir respawn-item && cd respawn-item
+[~] % echo "item: 371" > config.yml
 ```
 
 * If no config file is given, the plugin defaults to giving a gold nugget.
